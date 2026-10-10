@@ -69,6 +69,9 @@ across Spark and Trino:
 4. **Fan-out write** — one transaction split across independent workers; nothing is visible until the
    parent commits, then everything at once.
 
+Slides from the Lakehouse Day EU 2026 talk:
+[multi-table-transactions-lakehouseday2026.pdf](docs/multi-table-transactions-lakehouseday2026.pdf).
+
 ## The code
 
 The implementation lives on branches of real forks of the upstream projects:
@@ -161,6 +164,10 @@ And these are concrete, ownable pieces of work:
 - **More engines** — beyond Spark and Trino. The protocol is engine-agnostic by design.
 - **A setup anyone can run** — the demo currently needs source-built jars. A container image, or a
   path that works against released artifacts, would make this far easier to evaluate.
+- **Security and robustness hardening** — authorization on the transaction endpoints is incomplete
+  (table write privilege is not yet enforced there), and a read point that has aged out currently
+  falls back to the latest data instead of failing. **Do not expose this PoC to untrusted
+  principals.** Details are in the design doc's security section.
 
 ## Where this is headed
 
