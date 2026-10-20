@@ -87,9 +87,9 @@ with the Spark 4.1.x runtime across the catalog APIs this work uses, and that is
 demos run on.
 
 > [!NOTE]
-> Code is being prepared for publication and the branch links above will go live shortly before the
-> talk. Follow the branch links, not the repository roots — a fork's default branch is upstream code
-> and will not show this work.
+> Follow the branch links, not the repository roots — a fork's default branch is upstream code
+> and will not show this work. The code here is the version shown at the talk; the write path is
+> moving to Iceberg table branches, and the updated code will be linked here when it's published.
 
 ## Try it yourself
 
@@ -224,13 +224,14 @@ upstream questions will be pointed that way.
 
 ## Project relationship
 
-This is a personal project. It was not initiated by Cloudera; Cloudera is aware of the work and
-supports it, and copyright is held by my employer, Cloudera, per standard employment terms.
+This work was developed at Cloudera, and copyright is held by Cloudera, Inc. Contributions from
+it to Apache projects are made under Cloudera's Corporate Contributor License Agreement with the
+Apache Software Foundation.
 
-This repository is **not** an Apache Software Foundation project. It is an independent proof of
-concept built *on* the Apache lakehouse stack — Apache Polaris, Apache Iceberg, Apache Spark —
-together with Trino, and proposed as an additive catalog extension. Nothing here is an official
-deliverable of any of those projects.
+This repository is **not** an Apache Software Foundation project. It is a proof of concept built
+*on* the Apache lakehouse stack — Apache Polaris, Apache Iceberg, Apache Spark — together with
+Trino, and proposed as an additive catalog extension. Nothing here is an official deliverable of
+any of those projects.
 
 Apache®, Apache Polaris™, Apache Iceberg™, and Apache Spark™ are trademarks of the Apache Software
 Foundation.
